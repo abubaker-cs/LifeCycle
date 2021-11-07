@@ -1,5 +1,6 @@
 package org.abubaker.lifecycle
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,19 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this@MainActivity, R.layout.activity_main)
 
         Log.e("onCreate method", "is called...")
+
+        binding.btnSubmit.setOnClickListener {
+
+
+            val intent = Intent(this@MainActivity, AnotherActivity::class.java).apply {
+                putExtra("key1", "Value1")
+                putExtra("key2", "Value2")
+
+            }
+
+
+        }
+
     }
 
     // onStart
