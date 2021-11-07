@@ -3,14 +3,21 @@ package org.abubaker.lifecycle
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import org.abubaker.lifecycle.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    // Binding Object
+    private lateinit var binding: ActivityMainBinding
 
     // onCreate
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        // Inflate Layout (XML)
+        binding = DataBindingUtil.setContentView(this@MainActivity, R.layout.activity_main)
 
         Log.e("onCreate method", "is called...")
     }
