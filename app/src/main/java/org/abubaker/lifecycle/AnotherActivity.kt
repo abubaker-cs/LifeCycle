@@ -30,6 +30,17 @@ class AnotherActivity : AppCompatActivity() {
         val user = intent.getStringExtra("username")
         Log.i("User: ", "$user")
 
+        /**
+         * Since validateNull variable was not passed using putExtra from the MainActivity,
+         * thus due to @Null, it will not be printed using Log
+         */
+        val validateMe = intent.getStringExtra("validateNull")
+
+        // Check @Null Pointer
+        validateMe?.let {
+            Log.i("Verified:", "$validateMe")
+        }
+
         val pass = intent.getStringExtra("password")
         Log.i("Pass: ", "$pass")
 

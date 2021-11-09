@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             Log.i("Activated: ", "Send button is pressed")
 
             /**
+             * .apply{} will be used to structure and pass DATA to another activity using putExtra()
              * putExtra - Send DATA to another Activity
              */
             val intent = Intent(this@MainActivity, AnotherActivity::class.java).apply {
