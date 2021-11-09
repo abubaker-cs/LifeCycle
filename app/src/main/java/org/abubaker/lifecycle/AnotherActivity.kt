@@ -27,11 +27,11 @@ class AnotherActivity : AppCompatActivity() {
          */
 
         // Get the data and print it in the log.
-        val keyValue1 = intent.getStringExtra("key1")
-        Log.i("value 1", "$keyValue1")
+        val user = intent.getStringExtra("username")
+        Log.i("User: ", "$user")
 
-        val keyValue2 = intent.getStringExtra("key2")
-        Log.i("value 2", "$keyValue2")
+        val pass = intent.getStringExtra("password")
+        Log.i("Pass: ", "$pass")
 
     }
 
