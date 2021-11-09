@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         tools:context=".AnotherActivity">
 
+        <!--TODO Step 4: Just Add the TextView to the Another Activity to just see that it is launched.-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
