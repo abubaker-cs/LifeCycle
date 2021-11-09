@@ -36,6 +36,22 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /**
+     *  Activity Launch
+     *      1. onCreate()
+     *      2. onStart() <<< onRestart()
+     *      3. onResume()
+     *
+     *  Activity Running
+     *      4. onPause()
+     *      5. onStop() >>> onRestart()
+     *      6. onDestroy()
+     *
+     *  Activity Shutdown
+     *
+     *  onStop() > App Process Killed (For Memory Optimization) > onCreate()
+     */
+
     // onStart
     override fun onStart() {
         super.onStart()
