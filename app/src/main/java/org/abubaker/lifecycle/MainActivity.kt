@@ -43,7 +43,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnSubmit.setOnClickListener {
 
-
+            /**
+             * putExtra - Send DATA to another Activity
+             */
             val intent = Intent(this@MainActivity, AnotherActivity::class.java).apply {
                 putExtra("key1", "Value1")
                 putExtra("key2", "Value2")
